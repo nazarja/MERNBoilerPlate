@@ -11,7 +11,6 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
     const user = await signInUser(req.body);
     if (user) {
-        console.log(cookieName)
         res.cookie(cookieName, jwt.sign({ _id: user._id }), {
             maxAge: new Date().getTime() + expiresSeconds,
             httpOnly: true,

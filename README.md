@@ -26,3 +26,13 @@ Main Technologies used includes:
 - Open two terminals
 - Start the react frontend with `npm start`
 - Start the express backend with `npm run start:dev`
+
+ 
+## Middleware Info
+A middleware function will add a `user` object/property to the `req` object.  
+If the user is authenticated, the user object will be filled with the users mongo _id and isAuth set to true
+
+example:
+```
+req.user  { _id: '123456789', isAuth: true };
+```

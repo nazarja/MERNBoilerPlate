@@ -13,7 +13,6 @@ const verify = token => {
 };
 
 const jwtParser = (req, res, next) => {
-    console.log("hello")
     req.user = { _id: null, isAuth: false };
     let token = req.cookies[cookieName];
     if (token) {
